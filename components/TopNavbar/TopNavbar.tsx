@@ -1,5 +1,8 @@
 import React from "react";
 
+// Icons.
+import { FiGithub, FiLinkedin } from "react-icons/fi";
+
 // Components.
 import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-scroll";
@@ -36,7 +39,10 @@ const TopNavbar = () => {
             </Link>
           </div>
           <div>|</div>
-          <div>SOCIALS</div>
+          <div>
+            <FiGithub />
+            <FiLinkedin />
+          </div>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
