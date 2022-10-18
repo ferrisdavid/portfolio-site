@@ -19,21 +19,24 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div>
+
+      <main>
         <TopNavbar />
-        <div id="landing" style={{ height: "300px" }}>
-          Landing
+        <div className="sections">
+          <div id="landing" style={{ height: "300px" }}>
+            Landing
+          </div>
+          <div id="about" style={{ height: "300px" }}>
+            About
+          </div>
+          <div id="projects" style={{ height: "300px" }}>
+            Projects
+          </div>
+          <div id="contact" style={{ height: "300px" }}>
+            Contact
+          </div>
         </div>
-        <div id="about" style={{ height: "300px" }}>
-          About
-        </div>
-        <div id="projects" style={{ height: "300px" }}>
-          Projects
-        </div>
-        <div id="contact" style={{ height: "300px" }}>
-          Contact
-        </div>
-      </div>
+      </main>
       {/* <main className={styles.main}>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
