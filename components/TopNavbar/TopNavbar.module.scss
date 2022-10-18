@@ -1,10 +1,11 @@
 .topNav {
   display: flex;
-  height: 42px;
+  height: 55px;
   justify-content: space-between;
   align-items: center;
   gap: 10px;
   padding: 0px 10px;
+  background-color: white;
   box-shadow: 0 2px 4px #0000001a;
 
   .icon {
@@ -17,14 +18,16 @@
 
   .links {
     display: flex;
-    gap: 10px;
+    gap: 25px;
+    font-weight: 600;
+    align-items: center;
 
     .sectionLinks {
       display: flex;
-      gap: 15px;
+      gap: 45px;
       text-transform: uppercase;
-      letter-spacing: 1.5px;
-      font-size: 16px;
+      letter-spacing: 1.6px;
+      font-size: 14px;
     }
   }
 }
