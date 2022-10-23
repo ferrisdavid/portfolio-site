@@ -1,10 +1,7 @@
 .topNav {
   display: flex;
-  height: 54px;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
-  padding: 0px 10px;
   background-color: white;
   box-shadow: 0 2px 4px #0000001a;
 
@@ -14,10 +11,12 @@
     flex-grow: 1;
     align-items: center;
     gap: 15px;
+    padding-left: 10px;
     opacity: 0;
 
     .header {
-      font-size: 18px;
+      font-size: 14px;
+      color: #4a4a4a;
       font-weight: 900;
       text-transform: uppercase;
       letter-spacing: 1.5px;
@@ -34,19 +33,27 @@
     height: 25px;
   }
 
+  .toggle {
+    border: none;
+    padding-right: 10px;
+    box-shadow: none;
+  }
+
   .rightSection {
     flex-grow: 0;
   }
 
   .links {
     display: flex;
-    gap: 25px;
+    background-color: white;
+    gap: 15px;
     font-weight: 600;
     align-items: center;
 
     .sectionLinks {
       display: flex;
-      align-self: flex-end;
+      justify-content: center;
+      align-items: center;
       gap: 45px;
 
       .link {
@@ -68,6 +75,7 @@
     .socials {
       display: flex;
       gap: 5px;
+      padding-right: 10px;
 
       .socialLink {
         transition: 0.3s ease-in;

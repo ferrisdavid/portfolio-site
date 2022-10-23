@@ -17,6 +17,7 @@ import styles from "./TopNavbar.module.scss";
 const TopNavbar = () => {
   const [showIcon, setShowIcon] = useState(false);
 
+  // Logo Fade Effect
   useEffect(() => {
     setTimeout(() => setShowIcon(true), 500);
   }, []);
@@ -31,11 +32,17 @@ const TopNavbar = () => {
         <div className={styles.header}>David Ferris</div>
       </div>
 
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Toggle
+        className={styles.toggle}
+        aria-controls="basic-navbar-nav"
+      />
 
-      <Navbar.Collapse id="basic-navbar-nav" className={styles.rightSection}>
+      <Navbar.Collapse
+        id="basic-navbar-nav"
+        className={`mt-1 mt-lg-0 ${styles.rightSection}`}
+      >
         <Nav className={styles.links}>
-          <div className={styles.sectionLinks}>
+          <div className={`mt-1 ${styles.sectionLinks}`}>
             <Link
               className={styles.link}
               to="about"
@@ -64,7 +71,7 @@ const TopNavbar = () => {
               Contact
             </Link>
           </div>
-          <div className={styles.separator}></div>
+          <div className={`${styles.separator} d-none d-sm-block`} />
           <div className={styles.socials}>
             <FiGithub className={styles.socialLink} size={16} />
             <FiLinkedin className={styles.socialLink} size={16} />
