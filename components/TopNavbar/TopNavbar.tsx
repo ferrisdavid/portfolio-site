@@ -6,6 +6,7 @@ import { FiGithub, FiLinkedin } from "react-icons/fi";
 // Components.
 import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-scroll";
+import NavIcon from "../../theme/NavIcon/NavIcon";
 
 // Styles.
 import styles from "./TopNavbar.module.scss";
@@ -19,8 +20,9 @@ const TopNavbar = () => {
     <Navbar sticky="top" expand="sm" collapseOnSelect className={styles.topNav}>
       <div className={styles.icon}>
         <Link to="landing" smooth duration={300} offset={-50}>
-          <div>ICON</div>
+          <NavIcon />
         </Link>
+        <div className={styles.header}>David Ferris</div>
       </div>
 
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -28,20 +30,38 @@ const TopNavbar = () => {
       <Navbar.Collapse id="basic-navbar-nav" className={styles.rightSection}>
         <Nav className={styles.links}>
           <div className={styles.sectionLinks}>
-            <Link to="about" smooth duration={300} offset={-50}>
+            <Link
+              className={styles.link}
+              to="about"
+              smooth
+              duration={300}
+              offset={-50}
+            >
               About
             </Link>
-            <Link to="projects" smooth duration={300} offset={-50}>
+            <Link
+              className={styles.link}
+              to="projects"
+              smooth
+              duration={300}
+              offset={-50}
+            >
               Projects
             </Link>
-            <Link to="contact" smooth duration={300} offset={-50}>
+            <Link
+              className={styles.link}
+              to="contact"
+              smooth
+              duration={300}
+              offset={-50}
+            >
               Contact
             </Link>
           </div>
-          <div>|</div>
-          <div>
-            <FiGithub />
-            <FiLinkedin />
+          <div className={styles.separator}></div>
+          <div className={styles.socials}>
+            <FiGithub className={styles.socialLink} size={16} />
+            <FiLinkedin className={styles.socialLink} size={16} />
           </div>
         </Nav>
       </Navbar.Collapse>
