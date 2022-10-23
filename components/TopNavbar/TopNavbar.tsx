@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 // Icons.
 import { FiGithub, FiLinkedin } from "react-icons/fi";
@@ -15,10 +15,16 @@ import styles from "./TopNavbar.module.scss";
  * TopNavbar.tsx -
  ****************************************/
 const TopNavbar = () => {
+  const [showIcon, setShowIcon] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => setShowIcon(true), 500);
+  }, []);
+
   // Render.
   return (
     <Navbar sticky="top" expand="sm" collapseOnSelect className={styles.topNav}>
-      <div className={styles.icon}>
+      <div className={`${styles.icon} ${showIcon && styles.visible}`}>
         <Link to="landing" smooth duration={300} offset={-50}>
           <NavIcon />
         </Link>
