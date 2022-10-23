@@ -42,7 +42,7 @@ const TopNavbar = () => {
         className={`mt-1 mt-lg-0 ${styles.rightSection}`}
       >
         <Nav className={styles.links}>
-          <div className={`mt-1 mt-lg-0 ${styles.sectionLinks}`}>
+          <div className={`mt-1 ${styles.sectionLinks}`}>
             <Link
               className={styles.link}
               to="about"
