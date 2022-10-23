@@ -1,0 +1,24 @@
+.navIcon {
+  height: 40px;
+  width: 40px;
+  border: 1px solid #0000001a;
+  border-radius: 50%;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .logo {
+    @extend .navIcon;
+    display: flex;
+    padding-top: 2px;
+    align-items: center;
+    justify-content: center;
+    background: #4a4a4a;
+    color: white;
+    letter-spacing: 1.5px;
+    text-decoration: line-through;
+    font-weight: 600;
+  }
+}
