@@ -6,6 +6,7 @@ import Image from "next/image";
 // Assets.
 import bubbles from "../../assets/bubbles.png";
 import animoji from "../../assets/Animoji.png";
+import dots from "../../assets/Dots.png";
 
 // Styles.
 import styles from "./GreetingCard.module.scss";
@@ -50,12 +51,16 @@ const GreetingCard = () => {
         />
       </div>
       <div className={styles.introCard}>
-        Full he none no side. Uncommonly surrounded considered for him are its.
-        It we is read good soon. My to considered delightful invitation
-        announcing of no decisively boisterous. Did add dashwoods deficient man
-        concluded additions resources. Or landlord packages overcame distance
-        smallest in recurred. Wrong maids or be asked no on enjoy. Household few
-        sometimes out attending described. Lain just fact four of am meet high.
+        <Image src={dots} alt="ellipses" height={5} width={20} />
+        <hr className={styles.introSeparator} />
+        <div className={styles.intro}>
+          <div className={styles.introText}>
+            Software Engineer focused on Web Development with a passion for
+            smooth UIs and impactful technology experiences.
+          </div>
+        </div>
+        <hr className={styles.introSeparator} />
+        <Image src={dots} alt="ellipses" height={5} width={20} />
       </div>
     </div>
   );

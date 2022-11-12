@@ -42,6 +42,9 @@
 
   .introCard {
     transition: 0.3s ease-in;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     position: absolute;
     padding: 20px;
     max-width: 65%;
@@ -56,9 +59,26 @@
     border-radius: 17px;
     border: 0px solid rgba(255, 255, 255, 0.18);
 
-    color: white;
-    font-weight: 600;
-    font-size: 1.375rem;
+    .intro {
+      text-align: center;
+      flex-grow: 1;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .introText {
+        font-size: 1.5rem;
+        color: white;
+        font-weight: 600;
+        text-transform: capitalize;
+      }
+    }
+
+    .introSeparator {
+      color: white;
+      width: 80%;
+    }
   }
 }
 
@@ -74,6 +94,12 @@
       max-width: 75%;
       max-height: 60%;
       bottom: -35%;
+
+      .intro {
+        .introText {
+          font-size: 1.25rem;
+        }
+      }
     }
   }
 }
@@ -82,6 +108,12 @@
   .greetingCard {
     .introCard {
       max-width: 95%;
+
+      .intro {
+        .introText {
+          font-size: 0.85rem;
+        }
+      }
     }
   }
 }
@@ -94,6 +126,12 @@
   .greetingCard {
     .introCard {
       max-width: 100%;
+
+      .intro {
+        .introText {
+          font-size: 0.65rem;
+        }
+      }
     }
   }
 }
