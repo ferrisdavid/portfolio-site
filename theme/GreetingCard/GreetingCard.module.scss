@@ -7,7 +7,7 @@
   padding: 10px;
   border-radius: 6px;
   background-color: #fbf8f8;
-  width: 65%;
+  width: 60%;
   box-shadow: 0 2px 4px #0000001a;
 
   .topRow {
@@ -48,10 +48,9 @@
     position: absolute;
     padding: 20px;
     max-width: 65%;
-    height: 85%;
-    min-height: 220px;
+    height: 55%;
     right: -17%;
-    bottom: -60%;
+    bottom: -30%;
     background: rgba(23, 91, 168, 0.493);
     box-shadow: 0 4px 8px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(14.5px);
@@ -75,6 +74,10 @@
       }
     }
 
+    .dots {
+      display: block;
+    }
+
     .introSeparator {
       color: white;
       width: 80%;
@@ -92,7 +95,7 @@
     .introCard {
       right: -20%;
       max-width: 75%;
-      max-height: 60%;
+      height: 60%;
       bottom: -35%;
 
       .intro {
@@ -104,7 +107,7 @@
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 640px) {
   .greetingCard {
     .introCard {
       max-width: 95%;
@@ -118,7 +121,7 @@
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 320px) {
   .greeting {
     display: none !important;
   }
@@ -126,11 +129,20 @@
   .greetingCard {
     .introCard {
       max-width: 100%;
-
+      height: 65%;
       .intro {
         .introText {
           font-size: 0.65rem;
         }
+      }
+
+      .dots {
+        display: none !important;
+        visibility: hidden;
+      }
+
+      .introSeparator {
+        display: none;
       }
     }
   }

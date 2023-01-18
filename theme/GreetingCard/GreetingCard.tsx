@@ -51,7 +51,13 @@ const GreetingCard = () => {
         />
       </div>
       <div className={styles.introCard}>
-        <Image src={dots} alt="ellipses" height={5} width={20} />
+        <Image
+          className={styles.dots}
+          src={dots}
+          alt="ellipses"
+          height={5}
+          width={20}
+        />
         <hr className={styles.introSeparator} />
         <div className={styles.intro}>
           <div className={styles.introText}>
@@ -60,7 +66,13 @@ const GreetingCard = () => {
           </div>
         </div>
         <hr className={styles.introSeparator} />
-        <Image src={dots} alt="ellipses" height={5} width={20} />
+        <Image
+          className={styles.dots}
+          src={dots}
+          alt="ellipses"
+          height={5}
+          width={20}
+        />
       </div>
     </div>
   );
