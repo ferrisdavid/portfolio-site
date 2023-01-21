@@ -39,7 +39,7 @@ const TopNavbar = () => {
 
       <Navbar.Collapse
         id="basic-navbar-nav"
-        className={`mt-1 mt-lg-0 ${styles.rightSection}`}
+        className={`mt-1 mt-sm-0 ${styles.rightSection}`}
       >
         <Nav className={styles.links}>
           <div className={`mt-1 ${styles.sectionLinks}`}>
