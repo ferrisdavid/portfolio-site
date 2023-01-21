@@ -9,7 +9,7 @@ import GreetingCard from "../theme/GreetingCard/GreetingCard";
 const Landing = () => {
   // Render.
   return (
-    <div id="landing" className="landing" style={{ minHeight: "900px" }}>
+    <div id="landing" className="landing">
       <GreetingCard />
     </div>
   );
