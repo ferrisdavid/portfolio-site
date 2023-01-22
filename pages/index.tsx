@@ -7,6 +7,7 @@ import Image from "next/image";
 
 // Sections.
 import Landing from "../sections/Landing";
+import About from "../sections/About";
 
 // Styles.
 import styles from "../styles/Home.module.scss";
@@ -27,9 +28,7 @@ const Home: NextPage = () => {
         <TopNavbar />
         <div className="sections">
           <Landing />
-          <div id="about" style={{ height: "300px" }}>
-            About
-          </div>
+          <About />
           <div id="projects" style={{ height: "300px" }}>
             Projects
           </div>
