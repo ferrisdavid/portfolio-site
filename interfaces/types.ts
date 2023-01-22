@@ -1,0 +1,13 @@
+import { StaticImageData } from "next/image";
+
+interface ITabContent {
+  img: StaticImageData;
+  title: string;
+  duration: string;
+  bullets: string[];
+}
+
+export interface ITab {
+  tab: string;
+  content: ITabContent[];
+}
