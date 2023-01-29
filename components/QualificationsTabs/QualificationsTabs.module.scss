@@ -2,9 +2,9 @@
   position: relative;
   flex-grow: 1;
   padding: 25px;
-  min-height: 500px;
+  min-height: 475px;
   background-color: #4a4a4a;
-  max-width: 50%;
+  max-width: 45%;
   border-radius: 5px;
 
   .triangle {
@@ -68,20 +68,22 @@
 
     .experience {
       display: flex;
-      align-items: center;
-      gap: 10px;
+      align-items: flex-start;
+      gap: 20px;
 
       .details {
         display: flex;
         flex-direction: column;
         justify-content: center;
         gap: 2px;
+        flex-grow: 1;
+        flex-wrap: wrap;
 
         .position {
           font-size: 24px;
           font-weight: 900;
           color: white;
-          letter-spacing: 2.4px;
+          letter-spacing: 3.4px;
         }
 
         .duration {
@@ -89,6 +91,14 @@
           color: white;
           letter-spacing: 1.6px;
           font-weight: 600;
+        }
+
+        .bullets {
+          align-self: flex-start;
+          font-size: 18px;
+          font-weight: 400;
+          color: white;
+          letter-spacing: 1.6px;
         }
       }
     }

@@ -2,6 +2,11 @@ import { useState } from "react";
 
 // Animation.
 import { motion, AnimatePresence } from "framer-motion";
+import {
+  QualificationsVariants,
+  TabsVariants,
+  ArrowVariants,
+} from "../../constants/variants";
 
 // Components.
 import Image from "next/image";
@@ -25,8 +30,14 @@ const QualificationsTabs = ({ tabs }: Props) => {
 
   // Render.
   return (
-    <div className={styles.qualificationsCard}>
-      <div className={styles.triangle} />
+    <motion.div
+      className={styles.qualificationsCard}
+      variants={QualificationsVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+    >
+      <motion.div variants={ArrowVariants} className={styles.triangle} />
       <div className={styles.tabs}>
         {tabs.map(({ tab }, i) => (
           <div
@@ -40,30 +51,36 @@ const QualificationsTabs = ({ tabs }: Props) => {
       </div>
 
       <div className={styles.tabContent}>
-        <AnimatePresence mode="wait">
+        <AnimatePresence initial mode="wait">
           {tabs[activeTab].content.map((tabContent) => (
             <motion.div
               className={styles.experience}
               key={tabContent.title}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
+              variants={TabsVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
             >
               <Image
                 src={tabContent.img}
                 alt="Institution-Logo"
-                height="62px"
-                width="62px"
+                height={tabContent.height}
+                width={tabContent.width}
               />
               <div className={styles.details}>
                 <div className={styles.position}>{tabContent.title}</div>
                 <div className={styles.duration}>{tabContent.duration}</div>
+                <ul className={styles.bullets}>
+                  {tabContent.bullets?.map((bullet) => (
+                    <li key={bullet}>{bullet}</li>
+                  ))}
+                </ul>
               </div>
             </motion.div>
           ))}
         </AnimatePresence>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
