@@ -1,5 +1,6 @@
 // Components.
 import QualificationsTabs from "../components/QualificationsTabs/QualificationsTabs";
+import PersonalSpotlight from "../components/PersonalSpotlight/PersonalSpotlight";
 
 // Constants.
 import { Tabs } from "../constants/tabs";
@@ -17,7 +18,7 @@ const About = () => {
       <div id="about" className={styles.sectionLink} />
       <div className={styles.sectionHeader}>About</div>
       <div className={styles.aboutContainer}>
-        <div style={{ flexGrow: 1 }}>Personal Highlight</div>
+        <PersonalSpotlight />
         <QualificationsTabs tabs={Tabs} />
       </div>
     </div>
