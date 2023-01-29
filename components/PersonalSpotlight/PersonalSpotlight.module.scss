@@ -1,0 +1,26 @@
+.personalSpotlight {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 45px 25px;
+
+  align-items: center;
+
+  .pictureContainer {
+    // border: 4px solid #4a4a4a;
+    background-color: #4a4a4a;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+
+    .picture {
+      border-radius: 50%;
+    }
+  }
+
+  .personalDescription {
+    font-size: 24px;
+    letter-spacing: 2.4px;
+    text-align: center;
+  }
+}
