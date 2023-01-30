@@ -3,11 +3,9 @@ import { Variants } from "framer-motion";
 
 export const QualificationsVariants: Variants = {
   hidden: {
-    opacity: 0,
     scaleX: 0,
   },
-  inView: {
-    opacity: 1,
+  visible: {
     scaleX: 1,
     transition: {
       type: "spring",
@@ -20,11 +18,9 @@ export const QualificationsVariants: Variants = {
 
 export const ArrowVariants: Variants = {
   hidden: {
-    opacity: 0,
     scaleX: 0,
   },
   visible: {
-    opacity: 1,
     scaleX: 1,
     transition: {
       type: "spring",
@@ -42,4 +38,17 @@ export const TabsVariants: Variants = {
   hidden: { opacity: 0, y: -50 },
   visible: { opacity: 1, y: 0 },
   exit: { opacity: 0, y: 50 },
+};
+
+export const PersonalDescriptionVariants: Variants = {
+  hidden: { opacity: 0, y: -20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      bounce: 0.2,
+      staggerChildren: 0.2,
+    },
+  },
 };
