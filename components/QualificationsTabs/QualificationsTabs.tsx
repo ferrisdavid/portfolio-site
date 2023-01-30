@@ -35,20 +35,11 @@ const QualificationsTabs = ({ tabs }: Props) => {
       className={styles.qualificationsCard}
       variants={QualificationsVariants}
       initial="hidden"
-      whileInView="inView"
+      whileInView="visible"
       viewport={{ once: true }}
     >
-      <m.div
-        variants={ArrowVariants}
-        initial="hidden"
-        animate="visible"
-        className={styles.triangle}
-      />
-      <m.div
-        initial="hidden"
-        animate="visible"
-        variants={QualificationsContentVariants}
-      >
+      <m.div variants={ArrowVariants} className={styles.triangle} />
+      <m.div variants={QualificationsContentVariants}>
         <div className={styles.tabs}>
           {tabs.map(({ tab }, i) => (
             <div
@@ -62,7 +53,7 @@ const QualificationsTabs = ({ tabs }: Props) => {
         </div>
 
         <div className={styles.tabContent}>
-          <AnimatePresence initial={true} mode="wait">
+          <AnimatePresence initial mode="wait">
             {tabs[activeTab].content.map((tabContent) => (
               <m.div
                 className={styles.experience}
