@@ -15,7 +15,7 @@ const About = () => {
   // Render.
   return (
     <div>
-      <div id="about" className={styles.sectionLink} />
+      <div id="about" className={styles.sectionLink}></div>
       <div className={styles.sectionHeader}>About</div>
       <div className={styles.aboutContainer}>
         <PersonalSpotlight />

@@ -4,16 +4,16 @@ import { Variants } from "framer-motion";
 export const QualificationsVariants: Variants = {
   hidden: {
     opacity: 0,
-    x: "-50vw",
+    scaleX: 0,
   },
-  visible: {
+  inView: {
     opacity: 1,
-    x: 0,
+    scaleX: 1,
     transition: {
       type: "spring",
       bounce: 0.2,
       when: "beforeChildren",
-      staggerChildren: 0.2,
+      delayChildren: 0.2,
     },
   },
 };
@@ -21,16 +21,21 @@ export const QualificationsVariants: Variants = {
 export const ArrowVariants: Variants = {
   hidden: {
     opacity: 0,
-    width: 0,
+    scaleX: 0,
   },
   visible: {
     opacity: 1,
-    width: "25%",
+    scaleX: 1,
     transition: {
       type: "spring",
       bounce: 0.2,
     },
   },
+};
+
+export const QualificationsContentVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1 },
 };
 
 export const TabsVariants: Variants = {

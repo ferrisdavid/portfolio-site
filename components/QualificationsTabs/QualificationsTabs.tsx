@@ -1,9 +1,10 @@
 import { useState } from "react";
 
 // Animation.
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import {
   QualificationsVariants,
+  QualificationsContentVariants,
   TabsVariants,
   ArrowVariants,
 } from "../../constants/variants";
@@ -30,57 +31,68 @@ const QualificationsTabs = ({ tabs }: Props) => {
 
   // Render.
   return (
-    <motion.div
+    <m.div
       className={styles.qualificationsCard}
       variants={QualificationsVariants}
       initial="hidden"
-      whileInView="visible"
+      whileInView="inView"
       viewport={{ once: true }}
     >
-      <motion.div variants={ArrowVariants} className={styles.triangle} />
-      <div className={styles.tabs}>
-        {tabs.map(({ tab }, i) => (
-          <div
-            key={tab}
-            className={`${styles.tab} ${i === activeTab && styles.active}`}
-            onClick={() => setActiveTab(i)}
-          >
-            {tab}
-          </div>
-        ))}
-      </div>
-
-      <div className={styles.tabContent}>
-        <AnimatePresence initial mode="wait">
-          {tabs[activeTab].content.map((tabContent) => (
-            <motion.div
-              className={styles.experience}
-              key={tabContent.title}
-              variants={TabsVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
+      <m.div
+        variants={ArrowVariants}
+        initial="hidden"
+        animate="visible"
+        className={styles.triangle}
+      />
+      <m.div
+        initial="hidden"
+        animate="visible"
+        variants={QualificationsContentVariants}
+      >
+        <div className={styles.tabs}>
+          {tabs.map(({ tab }, i) => (
+            <div
+              key={tab}
+              className={`${styles.tab} ${i === activeTab && styles.active}`}
+              onClick={() => setActiveTab(i)}
             >
-              <Image
-                src={tabContent.img}
-                alt="Institution-Logo"
-                height={tabContent.height}
-                width={tabContent.width}
-              />
-              <div className={styles.details}>
-                <div className={styles.position}>{tabContent.title}</div>
-                <div className={styles.duration}>{tabContent.duration}</div>
-                <ul className={styles.bullets}>
-                  {tabContent.bullets?.map((bullet) => (
-                    <li key={bullet}>{bullet}</li>
-                  ))}
-                </ul>
-              </div>
-            </motion.div>
+              {tab}
+            </div>
           ))}
-        </AnimatePresence>
-      </div>
-    </motion.div>
+        </div>
+
+        <div className={styles.tabContent}>
+          <AnimatePresence initial={true} mode="wait">
+            {tabs[activeTab].content.map((tabContent) => (
+              <m.div
+                className={styles.experience}
+                key={tabContent.title}
+                variants={TabsVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+              >
+                <Image
+                  src={tabContent.img}
+                  alt="Institution-Logo"
+                  height={tabContent.height}
+                  width={tabContent.width}
+                />
+                <div className={styles.details}>
+                  <div className={styles.position}>{tabContent.title}</div>
+                  <div className={styles.duration}>{tabContent.duration}</div>
+                  <ul className={styles.bullets}>
+                    {tabContent.bullets?.map((bullet) => (
+                      <li key={bullet}>{bullet}</li>
+                    ))}
+                  </ul>
+                </div>
+              </m.div>
+            ))}
+          </AnimatePresence>
+        </div>
+      </m.div>
+    </m.div>
   );
 };
 
