@@ -25,6 +25,7 @@ export const ArrowVariants: Variants = {
     transition: {
       type: "spring",
       bounce: 0.2,
+      delay: 0.4,
     },
   },
 };
