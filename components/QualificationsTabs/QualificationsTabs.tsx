@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 // Animation.
-import { m, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence, AnimateSharedLayout } from "framer-motion";
 import {
   QualificationsVariants,
   QualificationsContentVariants,
@@ -38,7 +38,6 @@ const QualificationsTabs = ({ tabs }: Props) => {
       whileInView="visible"
       viewport={{ once: true }}
     >
-      <m.div variants={ArrowVariants} className={styles.triangle} />
       <m.div variants={QualificationsContentVariants}>
         <div className={styles.tabs}>
           {tabs.map(({ tab }, i) => (
