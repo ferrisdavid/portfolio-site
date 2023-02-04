@@ -13,24 +13,24 @@
 }
 
 .sectionLink {
-  margin-top: 10px;
+  height: 15px;
 }
 
 .aboutContainer {
   position: relative;
   display: flex;
   justify-content: center;
-}
 
-.triangle {
-  position: absolute;
-  transform-origin: right;
-  z-index: 1;
-  min-height: 75px;
-  width: 10%;
-  background-color: #4a4a4a;
-  border-radius: 5px;
-  top: 0;
-  margin-left: 2%;
-  clip-path: polygon(0 0, 100% 0%, 100% 98%, 0 6%);
+  .triangle {
+    position: absolute;
+    transform-origin: right;
+    z-index: 1;
+    min-height: 75px;
+    width: 10%;
+    background-color: #4a4a4a;
+    border-radius: 5px;
+    top: 0;
+    margin-left: 2%;
+    clip-path: polygon(0 0, 100% 0%, 100% 98%, 0 6%);
+  }
 }
