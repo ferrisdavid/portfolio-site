@@ -37,8 +37,8 @@ const PersonalSpotlight = () => {
         variants={PersonalDescriptionVariants}
         className={styles.personalDescription}
       >
-        A Fourth Year Computer Science Student at Ryerson University and SWE
-        based in Toronto Ontario.
+        Fourth Year Computer Science Student at Ryerson University and SWE based
+        in Toronto Ontario.
       </m.div>
       <m.div
         variants={PersonalDescriptionVariants}
@@ -47,7 +47,16 @@ const PersonalSpotlight = () => {
         I have over a years worth of in industry experience as an intern with TD
         Securities where I have developed a strong understanding of the Software
         Development Lifecycle and have honed my skills as both a frontend and
-        backend developer using the MERN Stack.
+        backend developer using the MERN Stack, (Mongo, Express, React, and
+        NodeJS).
+      </m.div>
+
+      <m.div
+        variants={PersonalDescriptionVariants}
+        className={styles.secondaryDescription}
+      >
+        My love for technology is in building software to create impactful
+        experiences for users no matter how big or small.
       </m.div>
     </m.div>
   );
