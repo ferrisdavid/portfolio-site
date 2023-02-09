@@ -1,5 +1,3 @@
-import React from "react";
-
 // Components.
 import GreetingCard from "../theme/GreetingCard/GreetingCard";
 
@@ -9,7 +7,7 @@ import GreetingCard from "../theme/GreetingCard/GreetingCard";
 const Landing = () => {
   // Render.
   return (
-    <div id="landing" className="landing">
+    <div id="landing">
       <GreetingCard />
     </div>
   );
