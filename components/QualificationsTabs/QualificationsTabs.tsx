@@ -1,12 +1,11 @@
 import { useState } from "react";
 
 // Animation.
-import { m, AnimatePresence, AnimateSharedLayout } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import {
   QualificationsVariants,
   QualificationsContentVariants,
   TabsVariants,
-  ArrowVariants,
 } from "../../constants/variants";
 
 // Components.
