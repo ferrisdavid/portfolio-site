@@ -8,7 +8,7 @@
     z-index: -1;
     width: 100%;
     height: 100%;
-    filter: blur(3px);
+    filter: blur(12px);
   }
 
   .overlay {
@@ -18,7 +18,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
     padding: 18px 12px;
 
     background-color: rgba(237, 157, 84, 0.05);
@@ -33,6 +33,7 @@
         font-size: 32px;
         font-weight: 700;
         letter-spacing: 3.2px;
+        text-transform: uppercase;
       }
 
       .overview {
