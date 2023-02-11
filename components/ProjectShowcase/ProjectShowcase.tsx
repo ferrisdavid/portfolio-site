@@ -7,6 +7,9 @@ import { m, AnimatePresence } from "framer-motion";
 import ProjectCard from "../../theme/ProjectCard/ProjectCard";
 import { ImageProps } from "next/image";
 
+// Interfaces.
+import { IProjectDescriptionConfig } from "../../interfaces/types";
+
 // Styles
 import styles from "./ProjectShowcase.module.scss";
 
@@ -15,13 +18,7 @@ interface Props {
   title: string;
   overview: string;
   src: ImageProps["src"];
-  descriptionConfig: {
-    orientation: "left" | "right";
-    descriptions: string[];
-    tools: string[];
-    github: string;
-    liveLink: string;
-  };
+  descriptionConfig: IProjectDescriptionConfig;
 }
 
 /****************************************
