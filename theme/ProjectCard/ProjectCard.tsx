@@ -44,7 +44,7 @@ const ProjectCard = ({ title, overview, src }: Props) => {
             src={src}
             alt="Project Showcase Image"
             height={"300px"}
-            width={"600px"}
+            width={"685px"}
           />
         </div>
       </div>
