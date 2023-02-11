@@ -5,7 +5,6 @@ import Image, { ImageProps } from "next/image";
 
 // Assets.
 import BackdropBubbles from "../../assets/BackdropBubbles.png";
-import TempShowcase from "../../assets/GroceryStoreShowcase.png";
 
 // Styles.
 import styles from "./ProjectCard.module.scss";
@@ -42,10 +41,10 @@ const ProjectCard = ({ title, overview, src }: Props) => {
         </div>
         <div className={styles.projectShowcase}>
           <Image
-            src={TempShowcase}
+            src={src}
             alt="Project Showcase Image"
-            height={"228px"}
-            width={"601px"}
+            height={"300px"}
+            width={"600px"}
           />
         </div>
       </div>
