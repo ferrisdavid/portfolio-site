@@ -30,8 +30,6 @@ const ProjectCard = ({ title, overview, src }: Props) => {
           objectPosition="center"
           src={BackdropBubbles}
           alt="Project Showcase Image"
-          height={"100%"}
-          width={"100%"}
         />
       </div>
       <div className={styles.overlay}>
