@@ -1,7 +1,11 @@
 import React from "react";
+import { m } from "framer-motion";
 
 // Components.
 import Image, { ImageProps } from "next/image";
+
+// Variants.
+import { ProjectShowcaseCardVariants } from "../../constants/variants";
 
 // Assets.
 import BackdropBubbles from "../../assets/BackdropBubbles.png";
@@ -22,7 +26,13 @@ interface Props {
 const ProjectCard = ({ title, overview, src }: Props) => {
   // Render
   return (
-    <div className={styles.projectCard}>
+    <m.div
+      className={styles.projectCard}
+      variants={ProjectShowcaseCardVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.75 }}
+    >
       <div className={styles.backdrop}>
         <Image
           layout="fill"
@@ -46,7 +56,7 @@ const ProjectCard = ({ title, overview, src }: Props) => {
           />
         </div>
       </div>
-    </div>
+    </m.div>
   );
 };
 

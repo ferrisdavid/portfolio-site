@@ -1,11 +1,12 @@
 import { FiTool, FiGithub, FiExternalLink } from "react-icons/fi";
-
-// Animation.
-import { m, AnimatePresence } from "framer-motion";
+import { m } from "framer-motion";
 
 // Components.
 import ProjectCard from "../../theme/ProjectCard/ProjectCard";
 import { ImageProps } from "next/image";
+
+// Variants.
+import { ProjectShowcaseDescVariants } from "../../constants/variants";
 
 // Interfaces.
 import { IProjectDescriptionConfig } from "../../interfaces/types";
@@ -35,7 +36,13 @@ const ProjectShowcase = ({
 
   // Helper fns.
   const renderProjectDescription = () => (
-    <div className={styles.projectDescription}>
+    <m.div
+      className={styles.projectDescription}
+      variants={ProjectShowcaseDescVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.75 }}
+    >
       <div className={styles.header}>Overview</div>
       <div className={styles.descParas}>
         {descriptions.map((desc, i) => (
@@ -52,7 +59,7 @@ const ProjectShowcase = ({
         <FiGithub href={github} size={20} />
         <FiExternalLink href={liveLink} size={20} />
       </div>
-    </div>
+    </m.div>
   );
 
   // Render.
