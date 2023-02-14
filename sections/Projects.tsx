@@ -25,7 +25,7 @@ const Projects = () => {
     <div>
       <div id="projects" className={styles.sectionLink}></div>
       <div className={styles.sectionHeader}>Projects</div>
-      <div style={{ padding: "25px 35px" }}>
+      <div className={styles.showcaseContainer}>
         <ProjectShowcase
           title={GroceryStoreConfig.title}
           overview={GroceryStoreConfig.overview}
