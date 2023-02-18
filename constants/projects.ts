@@ -46,8 +46,8 @@ export const PortfolioSiteConfig: IProject = {
   descriptionConfig: {
     orientation: "right",
     descriptions: [
-      "The Sorting Visualizer is a web Application built using the react library to visualize various common sorting algorithms. This project helped me gain a better understanding of key computer science fundamentals such as data structures, objects, and sorting algorithms while also giving me the opportunity to develop knowledge of the structure of web applications and key fundamentals such as CSS, JavaScript, and, additionally, React components. ",
-      "This project was created out of an interest in the various sorting algorithms that are so fundamental in the world of computer science and the differences between them. I hope you enjoy playing around with these visualizations.",
+      "This Portfolio Site was created to not only highlight the work and skills I have accumulated throughout my software journey but to also explore the latest industry standard tools for frontend development while expanding on my UI/UX design abilities. This project gave me great experience in these areas as I was able to take this project through the complete stages of an industry-standard project from initial UI/UX design using Figma to development with the dominant tooling of modern web applications such as NextJS, Typescript, and Sass and finally to the deployment and maintenance stage.",
+      "This project has helped me explore and enhance my creative perspective and UI design abilities while also strengthening my ability to kickstart projects and see them through all the typical stages a real-world project would expect to go through.",
     ],
     tools: ["NextJS", "Typescript", "Sass", "HTML"],
     github: "https://github.com/ferrisdavid/portfolio-site",
