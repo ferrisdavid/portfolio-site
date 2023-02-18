@@ -16,9 +16,10 @@ export const GroceryStoreConfig: IProject = {
       "Due to COVID-19 the simple task of shopping for daily necessities has become a stressful nightmare for millions around the world, The Grocery Store aims to bring some of the relaxation and comfort back to this process which has been lost.",
       "The Grocery Store is an ecommerce site where users can shop their daily necessities, it implements all the common functionalities of an ecommerce site such as a shopping cart, checkout, and order history, and extends the functionality to become an expansive consumer tool with functions such as a store locator for grocery stores of the users choice, nutritional facts for common food items, as well as a built in grocery list builder to help consumers prepare for their needs.",
     ],
-    tools: ["React", "HTML", "CSS"],
-    github: "",
-    liveLink: "",
+    tools: ["HTML", "CSS", "JavaScript", "PHP", "SQL"],
+    github: "https://github.com/ferrisdavid/GroceryStore",
+    liveLink:
+      "https://davidsgrocerystore.000webhostapp.com/grocery/login/login.php",
   },
 };
 
@@ -33,8 +34,8 @@ export const SortingVisualizerConfig: IProject = {
       "This project was created out of an interest in the various sorting algorithms that are so fundamental in the world of computer science and the differences between them. I hope you enjoy playing around with these visualizations.",
     ],
     tools: ["React", "HTML", "CSS"],
-    github: "",
-    liveLink: "",
+    github: "https://github.com/ferrisdavid/Sorting-Visualizer",
+    liveLink: "https://ferrisdavid.github.io/Sorting-Visualizer/",
   },
 };
 
@@ -48,8 +49,8 @@ export const PortfolioSiteConfig: IProject = {
       "The Sorting Visualizer is a web Application built using the react library to visualize various common sorting algorithms. This project helped me gain a better understanding of key computer science fundamentals such as data structures, objects, and sorting algorithms while also giving me the opportunity to develop knowledge of the structure of web applications and key fundamentals such as CSS, JavaScript, and, additionally, React components. ",
       "This project was created out of an interest in the various sorting algorithms that are so fundamental in the world of computer science and the differences between them. I hope you enjoy playing around with these visualizations.",
     ],
-    tools: ["React", "HTML", "CSS"],
-    github: "",
+    tools: ["NextJS", "Typescript", "Sass", "HTML"],
+    github: "https://github.com/ferrisdavid/portfolio-site",
     liveLink: "",
   },
 };
