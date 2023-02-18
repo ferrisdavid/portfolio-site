@@ -56,8 +56,8 @@ const ProjectShowcase = ({
         {tools.join(", ")}
       </div>
       <div className={styles.links}>
-        <FiGithub href={github} size={20} />
-        <FiExternalLink href={liveLink} size={20} />
+        <FiGithub onClick={() => window.open(github)} size={20} />
+        <FiExternalLink onClick={() => window.open(liveLink)} size={20} />
       </div>
     </m.div>
   );
