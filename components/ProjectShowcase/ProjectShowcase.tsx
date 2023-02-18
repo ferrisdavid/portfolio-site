@@ -64,10 +64,9 @@ const ProjectShowcase = ({
 
   // Render.
   return (
-    <div className={styles.projectShowcase}>
-      {orientation === "left" && renderProjectDescription()}
+    <div className={`${styles.projectShowcase} ${styles[orientation]}`}>
       <ProjectCard title={title} overview={overview} src={src} />
-      {orientation === "right" && renderProjectDescription()}
+      {renderProjectDescription()}
     </div>
   );
 };

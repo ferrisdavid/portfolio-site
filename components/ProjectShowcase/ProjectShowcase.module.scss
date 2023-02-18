@@ -56,3 +56,21 @@
     }
   }
 }
+
+.left {
+  flex-direction: row-reverse;
+}
+
+.right {
+  flex-direction: row;
+}
+
+@media only screen and (max-width: 1020px) {
+  .projectShowcase {
+    flex-direction: column;
+
+    .projectDescription {
+      max-width: 100%;
+    }
+  }
+}
