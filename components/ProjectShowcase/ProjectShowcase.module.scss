@@ -44,9 +44,15 @@
 
     .links {
       display: flex;
-      gap: 2px;
+      gap: 5px;
       align-items: center;
       color: #4a4a4a;
+
+      svg {
+        &:hover {
+          cursor: pointer;
+        }
+      }
     }
   }
 }
