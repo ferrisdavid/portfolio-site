@@ -3,14 +3,11 @@ import type { NextPage } from "next";
 // Components.
 import TopNavbar from "../components/TopNavbar/TopNavbar";
 import Head from "next/head";
-import Image from "next/image";
 
 // Sections.
 import Landing from "../sections/Landing";
 import About from "../sections/About";
-
-// Styles.
-import styles from "../styles/Home.module.scss";
+import Projects from "../sections/Projects";
 
 const Home: NextPage = () => {
   return (
@@ -29,9 +26,7 @@ const Home: NextPage = () => {
         <div className="sections">
           <Landing />
           <About />
-          <div id="projects" style={{ height: "300px" }}>
-            Projects
-          </div>
+          <Projects />
           <div id="contact" style={{ height: "300px" }}>
             Contact
           </div>

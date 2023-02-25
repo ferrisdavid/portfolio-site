@@ -14,6 +14,7 @@
 
 .sectionLink {
   height: 15px;
+  margin-top: 45px;
 }
 
 .aboutContainer {
@@ -33,4 +34,8 @@
     margin-left: 2%;
     clip-path: polygon(0 0, 100% 0%, 100% 98%, 0 6%);
   }
+}
+
+.showcaseContainer {
+  padding: 25px 35px;
 }

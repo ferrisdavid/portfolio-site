@@ -53,3 +53,39 @@ export const PersonalDescriptionVariants: Variants = {
     },
   },
 };
+
+export const ProjectShowcaseCardVariants: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      bounce: 0.2,
+    },
+  },
+};
+
+export const ProjectShowcaseDescVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      type: "spring",
+      bounce: 0.2,
+      delay: 0.5,
+    },
+  },
+};
+
+export const ProjectSeparatorVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      type: "spring",
+      bounce: 0.2,
+      delay: 0.4,
+    },
+  },
+};

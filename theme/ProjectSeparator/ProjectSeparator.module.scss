@@ -1,0 +1,28 @@
+.separator {
+  margin: 15px 20px;
+  display: flex;
+  align-items: center;
+
+  .line {
+    stroke: #4a4a4a;
+    stroke-width: 1px;
+  }
+
+  .circle {
+    stroke: #4a4a4a;
+    stroke-width: 1px;
+    fill: transparent;
+  }
+}
+
+.right {
+  justify-content: flex-end;
+
+  .rotate {
+    transform: rotateY(180deg);
+  }
+}
+
+.left {
+  justify-content: flex-start;
+}
