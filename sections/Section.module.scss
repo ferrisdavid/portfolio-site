@@ -39,3 +39,29 @@
 .showcaseContainer {
   padding: 25px 35px;
 }
+
+.waveContainer {
+  height: 30vh;
+  background-color: #4a4a4a;
+  position: relative;
+}
+
+.waveContainer::before {
+  content: "";
+  transform: rotate(180deg);
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  top: -0.3%;
+  left: 0;
+  background-size: auto;
+  background-repeat: repeat no-repeat;
+  background-position: 48vw bottom;
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200 116' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 1C19.5523 3 32.2291 4 51.5 8C104.5 16 200 37 300 57C400 77 500 96 600 88C700 81 800 46 900 26C987.526 4 1085.36 -1 1150 0C1169.54 -1 1180.49 0 1200 1V116H1150C1100 116 1000 116 900 116C800 116 700 116 600 116C500 116 400 116 300 116C200 116 100 116 50 116H0V1.98128Z' fill='%23ffffff'/></svg>");
+}
+
+@media (max-width: 850px) {
+  .waveContainer::before {
+    height: 50px;
+  }
+}
