@@ -1,4 +1,5 @@
 // Components.
+import GalaxyCanvas from "../components/GalaxyCanvas/GalaxyCanvas";
 
 // Constants.
 
@@ -13,16 +14,10 @@ const Contact = () => {
   return (
     <div className={styles.waveContainer}>
       <div id="contact" className={styles.sectionLink}></div>
-      <div
-        style={{
-          position: "absolute",
-          width: "100%",
-          top: "40%",
-          color: "white",
-        }}
-      >
+      <div className={styles.contactContainer}>
         <div className={styles.sectionHeader}>Contact</div>
       </div>
+      <GalaxyCanvas />
     </div>
   );
 };
