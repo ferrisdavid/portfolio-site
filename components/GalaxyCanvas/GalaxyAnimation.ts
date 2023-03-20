@@ -9,6 +9,10 @@ export const initCanvas = () => {
   const canvas = document.querySelector("#galaxy") as HTMLCanvasElement;
   const context = canvas.getContext("2d");
 
+  const scale = window.devicePixelRatio; // Change to 1 on retina screens to see blurry canvas.
+  canvas.width = canvas.width * scale;
+  canvas.height = canvas.height * scale;
+
   // // Canvas Limits.
   const width = canvas.width;
   const height = canvas.height;
@@ -32,13 +36,15 @@ export const initCanvas = () => {
 const createParticle = (
   context: CanvasRenderingContext2D,
   width: number,
-  height: number
+  height: number,
+  initY?: number
 ) => {
-  const size = Math.random() * 2;
+  const size = Math.random() * 4;
   const x = Math.random() * (width - size * 2) + size;
-  const y = Math.random() * (height - size * 2) + size;
+  const y =
+    initY !== undefined ? initY : Math.random() * (height - size * 2) + size;
   const dx = Math.random() - 0.5;
-  const dy = Math.random() - 0.5;
+  const dy = -(Math.abs(Math.random() - 0.5) / 3);
 
   return new Particle(context, x, y, dx, dy, size);
 };
@@ -49,7 +55,7 @@ export const initParticles = (
   width: number,
   height: number
 ) => {
-  const numParticles = 20;
+  const numParticles = 50;
   for (let i = 0; i < numParticles; i++) {
     const particle = createParticle(context, width, height);
     particles.push(particle);
@@ -69,7 +75,7 @@ export const animateParticles = (
     context.clearRect(0, 0, width, height);
     for (let i = 0; i < particles.length; i++) {
       if (particles[i].y > height || particles[i].y < 0) {
-        const particle = createParticle(context, width, height);
+        const particle = createParticle(context, width, height, height);
         particles[i] = particle;
       } else {
         particles[i].update();
