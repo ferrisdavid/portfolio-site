@@ -9,7 +9,7 @@ export const initCanvas = () => {
   const canvas = document.querySelector("#galaxy") as HTMLCanvasElement;
   const context = canvas.getContext("2d");
 
-  const scale = window.devicePixelRatio; // Change to 1 on retina screens to see blurry canvas.
+  const scale = window.devicePixelRatio === 1 ? 2 : window.devicePixelRatio; // Scales the pixels to prevent blurry particles.
   canvas.width = canvas.width * scale;
   canvas.height = canvas.height * scale;
 
