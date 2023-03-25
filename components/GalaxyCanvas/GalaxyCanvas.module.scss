@@ -4,12 +4,16 @@
   position: absolute;
   width: 40%;
   height: 100%;
-  background: linear-gradient(
-    315.81deg,
-    #616161 20.33%,
-    rgba(112, 108, 108, 0.01) 70.01%
-  );
-  border-radius: 12px;
+  // background: linear-gradient(
+  //   315.81deg,
+  //   #616161 20.33%,
+  //   rgba(112, 108, 108, 0.01) 70.01%
+  // );
+  background-image: url("../../assets/craters.png");
+  background-repeat: space;
+  background-position: left;
+  background-color: #616161;
+  // border-radius: 12px;
   transform: translateZ(0);
   aspect-ratio: auto 958 / 927;
   overflow-clip-margin: content-box;
@@ -23,7 +27,7 @@
   width: 40%;
   height: 100%;
   background: transparent;
-  border-radius: 12px;
+  // border-radius: 12px;
   transform: translateZ(0);
   aspect-ratio: auto 958 / 927;
   overflow-clip-margin: content-box;
