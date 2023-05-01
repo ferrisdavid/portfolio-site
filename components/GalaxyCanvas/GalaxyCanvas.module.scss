@@ -1,0 +1,28 @@
+.galaxy {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  background-image: url("../../assets/craters.png");
+  background-repeat: space;
+  background-position: left;
+  background-color: #616161;
+  transform: translateZ(0);
+  aspect-ratio: auto 958 / 927;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+.wave {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  background: transparent;
+  transform: translateZ(0);
+  aspect-ratio: auto 958 / 927;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}

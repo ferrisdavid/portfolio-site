@@ -8,6 +8,7 @@ import Head from "next/head";
 import Landing from "../sections/Landing";
 import About from "../sections/About";
 import Projects from "../sections/Projects";
+import Contact from "../sections/Contact";
 
 const Home: NextPage = () => {
   return (
@@ -27,9 +28,7 @@ const Home: NextPage = () => {
           <Landing />
           <About />
           <Projects />
-          <div id="contact" style={{ height: "300px" }}>
-            Contact
-          </div>
+          <Contact />
         </div>
       </main>
     </>

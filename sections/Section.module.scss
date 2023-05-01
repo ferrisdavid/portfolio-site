@@ -1,6 +1,5 @@
 .sectionHeader {
   display: flex;
-  flex-grow: 1;
   align-items: center;
   justify-content: center;
   margin-bottom: 10px;
@@ -10,6 +9,7 @@
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2.4px;
+  z-index: 2;
 }
 
 .sectionLink {
@@ -38,4 +38,69 @@
 
 .showcaseContainer {
   padding: 25px 35px;
+}
+
+.waveContainer {
+  height: fit-content;
+  background-color: #4a4a4a;
+  position: relative;
+}
+
+.contactContainer {
+  position: relative;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  gap: 15px;
+  padding-bottom: 15px;
+  z-index: 2;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    margin: 0 20% 25px 30%;
+    gap: 10px;
+
+    .action {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 2.2px;
+    }
+
+    .body {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+    }
+  }
+
+  .links {
+    color: #b7b6ff;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+
+    & svg {
+      transition: 0.3s ease-in-out;
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .content {
+    margin: 0 !important;
+    align-items: center;
+
+    .body {
+      display: none;
+    }
+  }
 }
