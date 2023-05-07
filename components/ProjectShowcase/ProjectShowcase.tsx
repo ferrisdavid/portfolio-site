@@ -41,7 +41,7 @@ const ProjectShowcase = ({
       variants={ProjectShowcaseDescVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.75 }}
+      viewport={{ once: true, amount: 0.65 }}
     >
       <div className={styles.header}>Overview</div>
       <div className={styles.descParas}>
