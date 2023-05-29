@@ -1,6 +1,42 @@
 // Interfaces.
 import { Variants } from "framer-motion";
 
+export const LandingVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 0.6,
+      staggerChildren: 0.4,
+    },
+  },
+};
+
+export const LandingDescriptionVariants: Variants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.5,
+      delayChildren: 0.4,
+    },
+  },
+};
+
+export const LandingDescriptionSectionsVariants: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 20,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      bounce: 0.2,
+    },
+  },
+};
+
 export const QualificationsVariants: Variants = {
   hidden: {
     scaleX: 0,

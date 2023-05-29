@@ -1,5 +1,13 @@
 // Components.
+import { m } from "framer-motion";
 import Image from "next/image";
+
+// Variants.
+import {
+  LandingVariants,
+  LandingDescriptionVariants,
+  LandingDescriptionSectionsVariants,
+} from "../constants/variants";
 
 // Assets.
 import LandingAnimoji from "../assets/LandingAnimoji.png";
@@ -17,22 +25,49 @@ import styles from "./Section.module.scss";
 const Landing = () => {
   // Render.
   return (
-    <div id="landing" className={styles.landingSection}>
+    <m.div
+      id="landing"
+      className={styles.landingSection}
+      variants={LandingVariants}
+      initial="hidden"
+      animate="visible"
+    >
       <Image
         className={styles.heroImg}
         src={LandingAnimoji}
         alt="David Ferris Greeting Image"
         quality={100}
       />
-      <div className={styles.greeting}>
-        <div className={styles.intro}>Hey There,</div>
-        <div className={styles.name}>I&apos;m David Ferris.</div>
-        <div className={styles.title}>Full Stack Software Engineer.</div>
-        <div className={styles.description}>
+      <m.div className={styles.greeting} variants={LandingDescriptionVariants}>
+        <m.div
+          className={styles.intro}
+          variants={LandingDescriptionSectionsVariants}
+        >
+          Hey There,
+        </m.div>
+        <m.div
+          className={styles.name}
+          variants={LandingDescriptionSectionsVariants}
+        >
+          I&apos;m David Ferris.
+        </m.div>
+        <m.div
+          className={styles.title}
+          variants={LandingDescriptionSectionsVariants}
+        >
+          Full Stack Software Engineer.
+        </m.div>
+        <m.div
+          className={styles.description}
+          variants={LandingDescriptionSectionsVariants}
+        >
           I am a Software Engineer based out of Toronto Ontario with a passion
           for creating impactful software tools and smooth UI experiences.
-        </div>
-        <div className={styles.socials}>
+        </m.div>
+        <m.div
+          className={styles.socials}
+          variants={LandingDescriptionSectionsVariants}
+        >
           <div className={styles.socialLogo}>
             <Image
               src={github}
@@ -82,9 +117,9 @@ const Landing = () => {
               }
             />
           </div>
-        </div>
-      </div>
-    </div>
+        </m.div>
+      </m.div>
+    </m.div>
   );
 };
 
