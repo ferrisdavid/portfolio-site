@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useScroll } from "framer-motion";
 
 // Icons.
 import { FiGithub, FiLinkedin } from "react-icons/fi";
@@ -16,15 +17,30 @@ import styles from "./TopNavbar.module.scss";
  ****************************************/
 const TopNavbar = () => {
   const [showIcon, setShowIcon] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  // Scroll Progress Hook.
+  const { scrollYProgress } = useScroll();
 
   // Logo Fade Effect
   useEffect(() => {
     setTimeout(() => setShowIcon(true), 500);
   }, []);
 
+  // Assign Page Scroll Listener to Update the scrolled state.
+  useEffect(() => {
+    const unsub = scrollYProgress.on("change", (v) => setScrolled(v > 0));
+    return () => unsub();
+  }, [scrollYProgress]);
+
   // Render.
   return (
-    <Navbar sticky="top" expand="sm" collapseOnSelect className={styles.topNav}>
+    <Navbar
+      sticky="top"
+      expand="sm"
+      collapseOnSelect
+      className={`${styles.topNav} ${scrolled && styles.scrolled}`}
+    >
       <div className={`${styles.icon} ${showIcon && styles.visible}`}>
         <Link to="landing" smooth duration={300} offset={-50}>
           <NavIcon />
