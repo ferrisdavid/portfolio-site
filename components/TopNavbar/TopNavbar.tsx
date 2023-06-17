@@ -29,7 +29,7 @@ const TopNavbar = () => {
 
   // Assign Page Scroll Listener to Update the scrolled state.
   useEffect(() => {
-    const unsub = scrollYProgress.on("change", (v) => setScrolled(v > 0));
+    const unsub = scrollYProgress.on("change", (v) => setScrolled(v > 0.05));
     return () => unsub();
   }, [scrollYProgress]);
 

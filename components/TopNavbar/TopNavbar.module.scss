@@ -3,10 +3,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: white;
-
-  &.scrolled {
-    box-shadow: 0 2px 4px #0000001a;
-  }
+  transition: background 0.2s ease-in-out;
 
   .icon {
     transition: 0.3s ease-in;
@@ -48,7 +45,6 @@
 
   .links {
     display: flex;
-    background-color: white;
     gap: 15px;
     font-weight: 600;
     align-items: center;
@@ -91,4 +87,12 @@
       }
     }
   }
+}
+
+.scrolled {
+  background: rgba(240, 238, 238, 0.267) !important;
+  backdrop-filter: blur(8.5px);
+  -webkit-backdrop-filter: blur(6.5px);
+  border: 1px solid rgba(192, 188, 188, 0.164);
+  border-width: 0 0 1px 0;
 }
