@@ -15,7 +15,10 @@ export const Tabs: ITab[] = [
         height: "70%",
         title: "Software Developer Intern",
         duration: "May 2021 - September 2021",
-        bullets: ["Did This", "Did That", "Completed This"],
+        bullets: [
+          "Led the front-end development of a new React dashboard web application from initial idea to deployment and maintenance to surface internal performance metrics from various sources.",
+          "Worked closely with multiple teams to gather requirements and roadmap development for the internal dashboard application providing a single source of metrics for an entire platform.",
+        ],
       },
       {
         img: TDLogo,
@@ -23,7 +26,10 @@ export const Tabs: ITab[] = [
         height: "70%",
         title: "Software Engineer Intern",
         duration: "May 2021 - September 2021",
-        bullets: ["Did This", "Did That", "Completed This"],
+        bullets: [
+          "Led the development of 2 new backend services using nodeJS, Express, and MongoDB for application agnostic persistent user preference storage and application logging/metric tracking used by over 15 applications leading to a reduction in development efforts by an average of 30 days.",
+          "Built and Led multiple frontend applications with React + Typescript in collaboration with external teams which consisted of requirements gathering, high level architecture design, UI/UX design using Figma, product sprint plannings and development roadmapping.",
+        ],
       },
     ],
   },
