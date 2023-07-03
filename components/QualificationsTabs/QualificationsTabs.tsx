@@ -61,17 +61,27 @@ const QualificationsTabs = ({ tabs }: Props) => {
                 animate="visible"
                 exit="exit"
               >
-                <Image
-                  src={tabContent.img}
-                  alt="Institution-Logo"
-                  height={tabContent.height}
-                  width={tabContent.width}
-                />
+                <div className={styles.logo}>
+                  <Image
+                    src={tabContent.img}
+                    alt="Institution-Logo"
+                    height={tabContent.height}
+                    width={tabContent.width}
+                  />
+                </div>
                 <div className={styles.details}>
                   <div className={styles.position}>{tabContent.title}</div>
                   <div className={styles.duration}>{tabContent.duration}</div>
-                  <ul className={styles.bullets}>
+                  <ul className={`${styles.bullets} d-none d-xl-block`}>
                     {tabContent.bullets?.map((bullet) => (
+                      <li key={bullet}>{bullet}</li>
+                    ))}
+                  </ul>
+
+                  <ul
+                    className={`${styles.bullets} d-none d-sm-block d-md-none d-lg-block  d-xl-none`}
+                  >
+                    {tabContent.bullets?.slice(0, 1).map((bullet) => (
                       <li key={bullet}>{bullet}</li>
                     ))}
                   </ul>
