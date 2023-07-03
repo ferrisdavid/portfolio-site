@@ -42,7 +42,7 @@ const PersonalSpotlight = () => {
       </m.div>
       <m.div
         variants={PersonalDescriptionVariants}
-        className={styles.secondaryDescription}
+        className={`${styles.secondaryDescription} d-none d-md-block`}
       >
         I have over a years worth of in industry experience as an intern with TD
         Securities where I have developed a strong understanding of the Software
