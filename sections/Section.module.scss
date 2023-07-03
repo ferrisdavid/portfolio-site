@@ -83,6 +83,7 @@
 .aboutContainer {
   position: relative;
   display: flex;
+  flex-direction: row;
   justify-content: center;
 
   .triangle {
@@ -223,6 +224,16 @@
       .socials {
         margin-top: 10px;
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .aboutContainer {
+    flex-direction: column;
+
+    .triangle {
+      display: none;
     }
   }
 }
