@@ -68,7 +68,7 @@ const Landing = () => {
           className={styles.socials}
           variants={LandingDescriptionSectionsVariants}
         >
-          <div className={styles.socialLogo}>
+          <div className={styles.socialLogo} title="Github">
             <Image
               src={github}
               alt="Github Logo"
@@ -78,10 +78,9 @@ const Landing = () => {
               }
             />
           </div>
-          <div className={styles.socialLogo}>
+          <div className={styles.socialLogo} title="LinkedIn">
             <Image
               src={linkedin}
-              className={styles.socialLogo}
               alt="LinkedIn Logo"
               quality={100}
               onClick={() =>
@@ -92,10 +91,9 @@ const Landing = () => {
               }
             />
           </div>
-          <div className={styles.socialLogo}>
+          <div className={styles.socialLogo} title="Gmail">
             <Image
               src={gmail}
-              className={styles.socialLogo}
               alt="Gmail Logo"
               quality={100}
               onClick={() =>
@@ -103,10 +101,9 @@ const Landing = () => {
               }
             />
           </div>
-          <div className={styles.socialLogo}>
+          <div className={styles.socialLogo} title="Resume">
             <Image
               src={file}
-              className={styles.socialLogo}
               alt="Resume Logo"
               quality={100}
               onClick={() =>
