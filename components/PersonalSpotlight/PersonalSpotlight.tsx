@@ -33,14 +33,14 @@ const PersonalSpotlight = () => {
           width={"95%"}
         />
       </m.div>
-      <m.div
+      <m.h2
         variants={PersonalDescriptionVariants}
         className={styles.personalDescription}
       >
         Fourth Year Computer Science Student at Ryerson University and SWE based
         in Toronto Ontario.
-      </m.div>
-      <m.div
+      </m.h2>
+      <m.p
         variants={PersonalDescriptionVariants}
         className={`${styles.secondaryDescription} d-none d-md-block`}
       >
@@ -49,15 +49,15 @@ const PersonalSpotlight = () => {
         Development Lifecycle and have honed my skills as both a frontend and
         backend developer using the MERN Stack, (Mongo, Express, React, and
         NodeJS).
-      </m.div>
+      </m.p>
 
-      <m.div
+      <m.p
         variants={PersonalDescriptionVariants}
         className={styles.secondaryDescription}
       >
         My love for technology is in building software to create impactful
         experiences for users no matter how big or small.
-      </m.div>
+      </m.p>
     </m.div>
   );
 };

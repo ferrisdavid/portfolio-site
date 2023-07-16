@@ -13,17 +13,18 @@ import styles from "./Section.module.scss";
 const Contact = () => {
   // Render.
   return (
-    <div className={styles.waveContainer}>
+    <section className={styles.waveContainer}>
       <div id="contact" className={styles.sectionLink}></div>
+      
       <div className={styles.contactContainer}>
-        <div className={styles.sectionHeader}>Contact</div>
+        <h1 className={styles.sectionHeader}>Contact</h1>
         <div className={styles.content}>
-          <div className={styles.action}>Lets Get in Touch!</div>
-          <div className={styles.body}>
+          <h2 className={styles.action}>Lets Get in Touch!</h2>
+          <p className={styles.body}>
             If you&apos;re interested in my work or just want to chat, check out
             my resume or reach me through my socials below. I look forward to
             hearing from you!
-          </div>
+          </p>
         </div>
         <div className={styles.links}>
           <FiFileText
@@ -58,8 +59,9 @@ const Contact = () => {
           />
         </div>
       </div>
+
       <GalaxyCanvas />
-    </div>
+    </section>
   );
 };
 

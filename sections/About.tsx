@@ -19,9 +19,9 @@ import styles from "./Section.module.scss";
 const About = () => {
   // Render.
   return (
-    <div>
+    <section>
       <div id="about" className={styles.sectionLink}></div>
-      <div className={styles.sectionHeader}>About</div>
+      <h1 className={styles.sectionHeader}>About</h1>
       <div className={styles.aboutContainer}>
         <m.div
           className={styles.triangle}
@@ -33,7 +33,7 @@ const About = () => {
         <PersonalSpotlight />
         <QualificationsTabs tabs={Tabs} />
       </div>
-    </div>
+    </section>
   );
 };
 

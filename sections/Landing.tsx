@@ -25,7 +25,7 @@ import styles from "./Section.module.scss";
 const Landing = () => {
   // Render.
   return (
-    <m.div
+    <m.section
       id="landing"
       className={styles.landingSection}
       variants={LandingVariants}
@@ -38,37 +38,37 @@ const Landing = () => {
         alt="David Ferris Greeting Image"
         quality={100}
       />
-      <m.div className={styles.greeting} variants={LandingDescriptionVariants}>
-        <m.div
+      <m.header className={styles.greeting} variants={LandingDescriptionVariants}>
+        <m.h1
           className={styles.intro}
           variants={LandingDescriptionSectionsVariants}
         >
           Hey There,
-        </m.div>
-        <m.div
+        </m.h1>
+        <m.h2
           className={styles.name}
           variants={LandingDescriptionSectionsVariants}
         >
           I&apos;m David Ferris.
-        </m.div>
-        <m.div
+        </m.h2>
+        <m.h2
           className={styles.title}
           variants={LandingDescriptionSectionsVariants}
         >
           Full Stack Software Engineer.
-        </m.div>
-        <m.div
+        </m.h2>
+        <m.p
           className={styles.description}
           variants={LandingDescriptionSectionsVariants}
         >
           I am a Software Engineer based out of Toronto Ontario with a passion
           for creating impactful software tools and smooth UI experiences.
-        </m.div>
+        </m.p>
         <m.div
           className={styles.socials}
           variants={LandingDescriptionSectionsVariants}
         >
-          <div className={styles.socialLogo} title="Github">
+          <a className={styles.socialLogo} title="Github">
             <Image
               src={github}
               alt="Github Logo"
@@ -77,8 +77,8 @@ const Landing = () => {
                 window.open("https://github.com/ferrisdavid", "_blank")
               }
             />
-          </div>
-          <div className={styles.socialLogo} title="LinkedIn">
+          </a>
+          <a className={styles.socialLogo} title="LinkedIn">
             <Image
               src={linkedin}
               alt="LinkedIn Logo"
@@ -90,8 +90,8 @@ const Landing = () => {
                 )
               }
             />
-          </div>
-          <div className={styles.socialLogo} title="Gmail">
+          </a>
+          <a className={styles.socialLogo} title="Gmail">
             <Image
               src={gmail}
               alt="Gmail Logo"
@@ -100,8 +100,8 @@ const Landing = () => {
                 (window.location.href = "mailto:david.ferris@torontomu.ca")
               }
             />
-          </div>
-          <div className={styles.socialLogo} title="Resume">
+          </a>
+          <a className={styles.socialLogo} title="Resume">
             <Image
               src={file}
               alt="Resume Logo"
@@ -113,10 +113,10 @@ const Landing = () => {
                 )
               }
             />
-          </div>
+          </a>
         </m.div>
-      </m.div>
-    </m.div>
+      </m.header>
+    </m.section>
   );
 };
 

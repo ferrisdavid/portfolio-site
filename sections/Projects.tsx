@@ -22,9 +22,10 @@ import styles from "./Section.module.scss";
 const Projects = () => {
   // Render.
   return (
-    <div>
+    <section>
       <div id="projects" className={styles.sectionLink}></div>
-      <div className={styles.sectionHeader}>Projects</div>
+
+      <h1 className={styles.sectionHeader}>Projects</h1>
       <div className={styles.showcaseContainer}>
         <ProjectShowcase
           title={GroceryStoreConfig.title}
@@ -47,7 +48,7 @@ const Projects = () => {
           descriptionConfig={PortfolioSiteConfig.descriptionConfig}
         />
       </div>
-    </div>
+    </section>
   );
 };
 

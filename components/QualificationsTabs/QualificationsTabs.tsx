@@ -70,8 +70,8 @@ const QualificationsTabs = ({ tabs }: Props) => {
                   />
                 </div>
                 <div className={styles.details}>
-                  <div className={styles.position}>{tabContent.title}</div>
-                  <div className={styles.duration}>{tabContent.duration}</div>
+                  <h1 className={styles.position}>{tabContent.title}</h1>
+                  <time className={styles.duration}>{tabContent.duration}</time>
                   <ul className={`${styles.bullets} d-none d-xl-block`}>
                     {tabContent.bullets?.map((bullet) => (
                       <li key={bullet}>{bullet}</li>
