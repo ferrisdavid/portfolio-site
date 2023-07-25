@@ -8,6 +8,7 @@ import { FiGithub, FiLinkedin } from "react-icons/fi";
 import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-scroll";
 import NavIcon from "../../theme/NavIcon/NavIcon";
+import Logo from "../../theme/Logo/Logo";
 
 // Styles.
 import styles from "./TopNavbar.module.scss";
@@ -43,7 +44,7 @@ const TopNavbar = () => {
     >
       <div className={`${styles.icon} ${showIcon && styles.visible}`}>
         <Link to="landing" smooth duration={300} offset={-50}>
-          <NavIcon />
+          <Logo />
         </Link>
         <div className={styles.header}>David Ferris</div>
       </div>
