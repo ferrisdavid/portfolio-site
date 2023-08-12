@@ -4,7 +4,7 @@
     fill: none;
 
     .diamond {
-        stroke: #4A4A4A;
+        stroke: #4a4a4ac7;
         stroke-width: 3;
         stroke-dasharray: 400;
         stroke-dashoffset: 0;
@@ -13,7 +13,7 @@
 
     .point {
         animation: draw 3s 0.6s ease-in-out forwards;
-        stroke: #4A4A4A;
+        stroke: #4a4a4ac7;
         stroke-width: 3;
         stroke-linecap: round; 
         stroke-dasharray: 400;
@@ -22,7 +22,7 @@
 
     .vertical {
         animation: draw 3s 0.6s ease-in-out forwards;
-        stroke: #4A4A4A;
+        stroke: #4a4a4ac7;
         stroke-width: 3;
         stroke-linecap: round;
         stroke-dasharray: 400;
