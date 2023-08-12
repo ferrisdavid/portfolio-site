@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useScroll } from "framer-motion";
+import { m, useScroll } from "framer-motion";
 
 // Icons.
 import { FiGithub, FiLinkedin } from "react-icons/fi";
@@ -7,8 +7,10 @@ import { FiGithub, FiLinkedin } from "react-icons/fi";
 // Components.
 import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-scroll";
-import NavIcon from "../../theme/NavIcon/NavIcon";
 import Logo from "../../theme/Logo/Logo";
+
+// Constants.
+import { HeaderVariants, HeaderNameVariants } from "../../constants/variants";
 
 // Styles.
 import styles from "./TopNavbar.module.scss";
@@ -17,16 +19,10 @@ import styles from "./TopNavbar.module.scss";
  * TopNavbar.tsx -
  ****************************************/
 const TopNavbar = () => {
-  const [showIcon, setShowIcon] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   // Scroll Progress Hook.
   const { scrollYProgress } = useScroll();
-
-  // Logo Fade Effect
-  useEffect(() => {
-    setTimeout(() => setShowIcon(true), 500);
-  }, []);
 
   // Assign Page Scroll Listener to Update the scrolled state.
   useEffect(() => {
@@ -42,12 +38,13 @@ const TopNavbar = () => {
       collapseOnSelect
       className={`${styles.topNav} ${scrolled && styles.scrolled}`}
     >
-      <div className={`${styles.icon} ${showIcon && styles.visible}`}>
+      <m.div variants={HeaderVariants} initial="hidden" animate='visible' className={styles.icon}>
         <Link to="landing" smooth duration={300} offset={-50}>
           <Logo />
         </Link>
-        <div className={styles.header}>David Ferris</div>
-      </div>
+        {/* TODO: Add Scroll Animation to Remove this Text from the Top Nav when scrolled. Also Consider increasing the padding on the left side of this section to make the logo further from the edge */}
+        <m.div variants={HeaderNameVariants} className={styles.header}>David Ferris</m.div>
+      </m.div>
 
       <Navbar.Toggle
         className={styles.toggle}

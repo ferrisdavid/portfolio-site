@@ -1,6 +1,16 @@
 // Interfaces.
 import { Variants } from "framer-motion";
 
+export const HeaderVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { delayChildren:0.5  } }
+}
+
+export const HeaderNameVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.6 } }
+}
+
 export const LandingVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
