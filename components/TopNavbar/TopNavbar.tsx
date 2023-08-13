@@ -39,11 +39,10 @@ const TopNavbar = () => {
       className={`${styles.topNav} ${scrolled && styles.scrolled}`}
     >
       <m.div variants={HeaderVariants} initial="hidden" animate='visible' className={styles.icon}>
-        <Link to="landing" smooth duration={300} offset={-50}>
+        <Link to="landing" smooth duration={300}>
           <Logo />
         </Link>
-        {/* TODO: Add Scroll Animation to Remove this Text from the Top Nav when scrolled. Also Consider increasing the padding on the left side of this section to make the logo further from the edge */}
-        <m.div variants={HeaderNameVariants} className={styles.header}>David Ferris</m.div>
+        <m.div variants={HeaderNameVariants} className={`${styles.header} ${scrolled && styles.collapsed}`}>David Ferris</m.div>
       </m.div>
 
       <Navbar.Toggle
@@ -62,7 +61,7 @@ const TopNavbar = () => {
               to="about"
               smooth
               duration={300}
-              offset={-50}
+              offset={-75}
             >
               About
             </Link>
@@ -71,7 +70,7 @@ const TopNavbar = () => {
               to="projects"
               smooth
               duration={300}
-              offset={-50}
+              offset={-75}
             >
               Projects
             </Link>
@@ -80,7 +79,7 @@ const TopNavbar = () => {
               to="contact"
               smooth
               duration={300}
-              offset={-50}
+              offset={-75}
             >
               Contact
             </Link>

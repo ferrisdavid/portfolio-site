@@ -18,7 +18,16 @@
       color: #4a4a4a;
       font-weight: 900;
       text-transform: uppercase;
+      white-space: nowrap;
+      overflow: hidden;
       letter-spacing: 1.5px;
+      max-width: 200px;
+      transition: 0.3s ease-in-out;
+
+      &.collapsed {
+        transition: 0.3s ease-in-out;
+        max-width: 0px;
+      }
     }
   }
 
