@@ -55,7 +55,7 @@ export const initParticles = (
   width: number,
   height: number
 ) => {
-  const numParticles = 50;
+  const numParticles = 55;
   for (let i = 0; i < numParticles; i++) {
     const particle = createParticle(context, width, height);
     particles.push(particle);

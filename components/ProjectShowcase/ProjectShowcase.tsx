@@ -41,9 +41,9 @@ const ProjectShowcase = ({
       variants={ProjectShowcaseDescVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.75 }}
+      viewport={{ once: true, amount: 0.65 }}
     >
-      <div className={styles.header}>Overview</div>
+      <h1 className={styles.header}>Overview</h1>
       <div className={styles.descParas}>
         {descriptions.map((desc, i) => (
           <div key={`desc-${title}-${i}`} className={styles.desc}>
@@ -56,8 +56,8 @@ const ProjectShowcase = ({
         {tools.join(", ")}
       </div>
       <div className={styles.links}>
-        <FiGithub onClick={() => window.open(github)} size={20} />
-        <FiExternalLink onClick={() => window.open(liveLink)} size={20} />
+        <FiGithub title="Source Code" onClick={() => window.open(github)} size={20} />
+        <FiExternalLink title="Live App" onClick={() => window.open(liveLink)} size={20} />
       </div>
     </m.div>
   );

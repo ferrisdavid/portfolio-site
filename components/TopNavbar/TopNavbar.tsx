@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { m, useScroll } from "framer-motion";
 
 // Icons.
 import { FiGithub, FiLinkedin } from "react-icons/fi";
@@ -6,7 +7,10 @@ import { FiGithub, FiLinkedin } from "react-icons/fi";
 // Components.
 import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-scroll";
-import NavIcon from "../../theme/NavIcon/NavIcon";
+import Logo from "../../theme/Logo/Logo";
+
+// Constants.
+import { HeaderVariants, HeaderNameVariants } from "../../constants/variants";
 
 // Styles.
 import styles from "./TopNavbar.module.scss";
@@ -15,22 +19,31 @@ import styles from "./TopNavbar.module.scss";
  * TopNavbar.tsx -
  ****************************************/
 const TopNavbar = () => {
-  const [showIcon, setShowIcon] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  // Logo Fade Effect
+  // Scroll Progress Hook.
+  const { scrollYProgress } = useScroll();
+
+  // Assign Page Scroll Listener to Update the scrolled state.
   useEffect(() => {
-    setTimeout(() => setShowIcon(true), 500);
-  }, []);
+    const unsub = scrollYProgress.on("change", (v) => setScrolled(v > 0.05));
+    return () => unsub();
+  }, [scrollYProgress]);
 
   // Render.
   return (
-    <Navbar sticky="top" expand="sm" collapseOnSelect className={styles.topNav}>
-      <div className={`${styles.icon} ${showIcon && styles.visible}`}>
-        <Link to="landing" smooth duration={300} offset={-50}>
-          <NavIcon />
+    <Navbar
+      sticky="top"
+      expand="sm"
+      collapseOnSelect
+      className={`${styles.topNav} ${scrolled && styles.scrolled}`}
+    >
+      <m.div variants={HeaderVariants} initial="hidden" animate='visible' className={styles.icon}>
+        <Link to="landing" smooth duration={300}>
+          <Logo />
         </Link>
-        <div className={styles.header}>David Ferris</div>
-      </div>
+        <m.div variants={HeaderNameVariants} className={`${styles.header} ${scrolled && styles.collapsed}`}>David Ferris</m.div>
+      </m.div>
 
       <Navbar.Toggle
         className={styles.toggle}
@@ -48,7 +61,7 @@ const TopNavbar = () => {
               to="about"
               smooth
               duration={300}
-              offset={-50}
+              offset={-75}
             >
               About
             </Link>
@@ -57,7 +70,7 @@ const TopNavbar = () => {
               to="projects"
               smooth
               duration={300}
-              offset={-50}
+              offset={-75}
             >
               Projects
             </Link>
@@ -66,7 +79,7 @@ const TopNavbar = () => {
               to="contact"
               smooth
               duration={300}
-              offset={-50}
+              offset={-75}
             >
               Contact
             </Link>
